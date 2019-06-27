@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>欢迎使用</title>
+</head>
+<body>
+<h1>登录页面</h1>
+
+<div>
+    <!--<form id="insert_modal" class="form-horizontal">-->
+        <!--<div class="col-sm-10">-->
+            <!--<input type="text" class="form-control" id="insert_name"-->
+                   <!--name="username" placeholder="请输入账号"/> <span-->
+                <!--class="help-block"></span>-->
+        <!--</div>-->
+        <!--<div class="col-sm-10">-->
+            <!--<input type="password" class="form-control" id="insert_password"-->
+                   <!--name="password" placeholder="请输入密码"/> <span-->
+                <!--class="help-block"></span>-->
+        <!--</div>-->
+
+        <!--<p></p>-->
+        <!--<button type="button" class="btn btn-primary" id="user_insert_btn">注册</button>-->
+
+    <!--</form>-->
+
+    <form action="#" th:action="@{/doLogin}" method="post">
+
+        <input type="text" name="username" class="username" th:value="*{username}">
+        <input type="password" name="password" class="password" th:value="*{password}">
+        <span th:text="'用户名：' +*{username}">aaa</span>
+        <span th:text="'密码：' +*{password}">aaa</span>
+        <button type="submit">登陆</button>
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
